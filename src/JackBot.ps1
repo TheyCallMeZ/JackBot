@@ -292,6 +292,11 @@ function Resolve-MessageInstruction([PSCustomObject]$Messages){
                         Start-Pack -JackTarget 7
                         Set-CommandLock -LockRecipient $Message.author
                     }
+                    "pack8"{
+                        Write-Log -Message "Starting Pack 8" -Type INF -Console -Log
+                        Start-Pack -JackTarget 8
+                        Set-CommandLock -LockRecipient $Message.author
+                    }
                     #Pack 1
                     "jack1"{
                         Invoke-GameSelect -MenuTarget 0 -CheckPack "pack1" -Wait 8 -Flavor "what do you know anyway?" -NoEnter
@@ -412,6 +417,22 @@ function Resolve-MessageInstruction([PSCustomObject]$Messages){
                     default {
                         Write-Log -Message "Sending default response" -Type INF -Console -Log
                         Send-DiscordMessage -Message $($Script:HelperText)
+                    }
+                    #Pack 8 
+                    "DrawAni"{
+                        Invoke-GameSelect -MenuTarget 0 -CheckPack "pack8" -Wait 9 -Flavor "Show Me Your Moves!"
+                    }
+                    "Wheel"{
+                        Invoke-GameSelect -MenuTarget 1 -CheckPack "pack8" -Wait 9 -Flavor "Wait... That's not Olmec!"
+                    }
+                    "JobJob"{
+                        Invoke-GameSelect -MenuTarget 2 -CheckPack "pack8" -Wait 9 -Flavor "Get A Job Ya Bum!"
+                    }
+                    "Poll"{
+                        Invoke-GameSelect -MenuTarget 3 -CheckPack "pack8" -Wait 9 -Flavor "Answers may appear on a future episode of Family Feud"
+                    }
+                    "Weapons"{
+                        Invoke-GameSelect -MenuTarget 4 -CheckPack "pack8" -Wait 9 -Flavor "Oh Man, I had something for this...."
                     }
                 }
                 # Optional Command Process confirmation

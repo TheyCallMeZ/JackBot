@@ -127,6 +127,22 @@
                 "Talk":"Talking Points",
                 "Blather":"Blather Round"
             }
+        },
+        {
+            "GameID": 8,
+            "CommandName":"Pack8",
+            "IsPlayable":false,
+            "Name":"The Jackbox Party Pack 8",
+            "Link":"The Jackbox Party Pack 8.url",
+            "FullPath":"",
+            "SplashTime": 10,
+            "SubGames":{
+                "DrawAni":"Drawful: Animate",
+                "Wheel":"The Wheel of Enormous Proportions",
+                "JobJob":"Job Job",
+                "Poll":"Poll Mine",
+                "Weapons":"Weapons Drawn"
+            }
         }
     ]
 }
