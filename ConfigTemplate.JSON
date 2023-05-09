@@ -143,6 +143,22 @@
                 "Poll":"Poll Mine",
                 "Weapon":"Weapons Drawn" 
             }
+        },
+        {
+            "GameID": 9,
+            "CommandName":"Pack9",
+            "IsPlayable":false,
+            "Name":"The Jackbox Party Pack 9",
+            "Link":"The Jackbox Party Pack 9.url",
+            "FullPath":"",
+            "SplashTime": 10,
+            "SubGames":{
+                "Fib4":"Fibbage 4",
+                "Quix":"Quixort",
+                "Junk":"Junktopia",
+                "Nonsense":"Nonsensory",
+                "Room":"Roomerang" 
+            }
         }
     ]
 }

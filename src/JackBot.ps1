@@ -325,6 +325,11 @@ function Resolve-MessageInstruction([PSCustomObject]$Messages){
                         Start-Pack -JackTarget 8
                         Set-CommandLock -LockRecipient $Message.author
                     }
+                    "pack8"{
+                        Write-Log -Message "Starting Pack 9" -Type INF -Console -Log
+                        Start-Pack -JackTarget 9
+                        Set-CommandLock -LockRecipient $Message.author
+                    }
                     #Pack 1
                     "jack1"{
                         Invoke-GameSelect -MenuTarget 0 -CheckPack "pack1" -Wait 8 -Flavor "what do you know anyway?" -NoEnter
@@ -457,6 +462,22 @@ function Resolve-MessageInstruction([PSCustomObject]$Messages){
                     }
                     "weapon"{
                         Invoke-GameSelect -MenuTarget 4 -CheckPack "pack8" -Wait 11 -Flavor "Ready? Aim. Fire!"
+                    }
+                    #Pack 9
+                    "fib4"{
+                        Invoke-GameSelect -MenuTarget 0 -CheckPack "pack9" -Wait 10 -Flavor "Liar, Liar, Something on something...."
+                    }
+                    "quix"{
+                        Invoke-GameSelect -MenuTarget 1 -CheckPack "pack9" -Wait 10 -Flavor "Bruh, Can you even Bubble Sort?"
+                    }
+                    "junk"{
+                        Invoke-GameSelect -MenuTarget 2 -CheckPack "pack9" -Wait 10 -Flavor "On This episode of Extreme Flippers..."
+                    }
+                    "nonsense"{
+                        Invoke-GameSelect -MenuTarget 3 -CheckPack "pack9" -Wait 10 -Flavor "Careful, the last guy went Bananas!"
+                    }
+                    "room"{
+                        Invoke-GameSelect -MenuTarget 4 -CheckPack "pack9" -Wait 11 -Flavor "What goes around the room...."
                     }
                     default {
                         Write-Log -Message "Sending default response" -Type INF -Console -Log
